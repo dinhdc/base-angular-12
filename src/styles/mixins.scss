@@ -1,8 +1,8 @@
-@mixin shadow{
-  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+@mixin shadow {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-@mixin card{
+@mixin card {
   padding: 32px;
   background: $base;
   border-radius: 8px;
