@@ -1,0 +1,7 @@
+@import "src/styles/colors.scss";
+
+:host-context(.form-field__error){
+  input{
+    border: 1px solid red;
+  }
+}

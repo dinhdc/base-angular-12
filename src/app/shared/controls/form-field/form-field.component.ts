@@ -17,11 +17,11 @@ export class FormFieldComponent implements OnInit {
   @Input() required: boolean = false;
   @Input() isInline: boolean = true;
   @Input() control!: AbstractControl;
+  @Input() patternError: string = '';
 
   constructor() {}
 
   ngOnInit() {
-    this.control.valueChanges.subscribe(x => console.log(x))
   }
 
   hasError(): boolean {

@@ -18,11 +18,15 @@
           Maximum {{ control.errors?.max }}
         </span>
         <span *ngSwitchCase="'required'"> This field is required </span>
-        <span *ngSwitchCase="'minLength'">
-          At least {{ control.errors?.minLength }} characters
+        <span *ngSwitchCase="'minlength'">
+          At least {{ control.errors?.minlength.requiredLength }} characters
         </span>
-        <span *ngSwitchCase="'maxLength'">
-          No more than {{ control.errors?.maxLength }} characters
+        <span *ngSwitchCase="'maxlength'">
+          No more than {{ control.errors?.maxlength.requiredLength }} characters
+        </span>
+        <span *ngSwitchCase="'pattern'">
+          <span *ngIf="patternError">{{patternError}}</span>
+          <span *ngIf="!patternError">Pattern does not match</span>
         </span>
       </ng-container>
     </div>
