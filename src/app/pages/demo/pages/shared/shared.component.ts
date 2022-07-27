@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {Regex, RegexError} from "../../../../shared";
+import {ControlItem} from "../../../../models/frontend";
 
 @Component({
   selector: 'app-shared',
@@ -12,6 +13,24 @@ export class SharedComponent implements OnInit {
   regexError = RegexError;
   inline: boolean = false;
   constructor(private fb: FormBuilder) {}
+
+  items: ControlItem[] = [
+    {
+      label: 'First', value: 1
+    },
+    {
+      label: 'Second', value: 2
+    },
+    {
+      label: 'Third', value: 3
+    },
+    {
+      label: 'Fourth', value: 4
+    },
+    {
+      label: 'Fifth', value: 5
+    },
+  ];
 
   ngOnInit(): void {
     this.form = this.fb.group({
@@ -33,6 +52,24 @@ export class SharedComponent implements OnInit {
           validators: [
             Validators.required,
           ],
+        }
+      ],
+      select: [
+        null,
+        {
+          updateOn: 'change',
+          validators: [
+            Validators.required
+          ]
+        }
+      ],
+      checkboxes: [
+        null,
+        {
+          updateOn: 'change',
+          validators: [
+            Validators.required
+          ]
         }
       ]
     });

@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { SharedRoutingModule } from './shared-routing.module';
 import { SharedComponent } from './shared.component';
-import { ButtonModule, InputModule, FormFieldModule, PasswordModule } from '../../../../shared';
+import { ButtonModule, InputModule, FormFieldModule, PasswordModule,
+  SelectModule, CheckboxesModule } from '../../../../shared';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -15,7 +16,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     InputModule,
     FormFieldModule,
-    PasswordModule
+    PasswordModule,
+    SelectModule,
+    CheckboxesModule
   ],
 })
 export class SharedModule {}
