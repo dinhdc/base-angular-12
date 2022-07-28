@@ -1,3 +1,5 @@
+import { DateModule } from './date/date.module';
+import { RadiosModule } from './radios/radios.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { InputModule } from './input/input.module';
@@ -13,14 +15,18 @@ import {CheckboxesModule} from "./checkboxes/checkboxes.module";
     FormFieldModule,
     PasswordModule,
     SelectModule,
-    CheckboxesModule
+    CheckboxesModule,
+    RadiosModule,
+    DateModule
   ],
   exports: [
     InputModule,
     FormFieldModule,
     PasswordModule,
     SelectModule,
-    CheckboxesModule
+    CheckboxesModule,
+    RadiosModule,
+    DateModule
   ],
   declarations: [],
 })

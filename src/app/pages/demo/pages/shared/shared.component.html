@@ -11,7 +11,7 @@
     [isInline]="inline"
     [patternError]="regexError.Email"
   >
-    <app-input formControlName="input" ></app-input>
+    <app-input formControlName="input"></app-input>
   </app-form-field>
   <app-form-field
     label="Password"
@@ -20,27 +20,39 @@
     [isInline]="inline"
   >
     <app-password formControlName="password"></app-password>
-
   </app-form-field>
 
-  <app-form-field label="Select"
-                  [required]="true"
-                  [control]="form.controls.select"
-                  [isInline]="inline">
+  <app-form-field
+    label="Select"
+    [required]="true"
+    [control]="form.controls.select"
+    [isInline]="inline"
+  >
     <app-select formControlName="select" [items]="items"></app-select>
-
   </app-form-field>
 
-  <app-form-field label="Checkbox"
-                  [required]="true"
-                  [control]="form.controls.checkboxes"
-                  [isInline]="inline">
-    <app-checkboxes formControlName="checkboxes" [items]="items"></app-checkboxes>
-
+  <app-form-field
+    label="Checkbox"
+    [required]="true"
+    [control]="form.controls.checkboxes"
+    [isInline]="inline"
+  >
+    <app-checkboxes
+      formControlName="checkboxes"
+      [items]="items"
+    ></app-checkboxes>
   </app-form-field>
 
+  <app-form-field
+    label="Radio"
+    [required]="true"
+    [control]="form.controls.radios"
+    [isInline]="inline"
+  >
+    <app-radios formControlName="radios" [items]="items"></app-radios>
+  </app-form-field>
 </form>
 
 <code>
-  {{form.value | json }}
+  {{ form.value | json }}
 </code>

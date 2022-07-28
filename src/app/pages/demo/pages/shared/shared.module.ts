@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { SharedRoutingModule } from './shared-routing.module';
 import { SharedComponent } from './shared.component';
 import { ButtonModule, InputModule, FormFieldModule, PasswordModule,
-  SelectModule, CheckboxesModule } from '../../../../shared';
+  SelectModule, CheckboxesModule, RadiosModule } from '../../../../shared';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -18,7 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormFieldModule,
     PasswordModule,
     SelectModule,
-    CheckboxesModule
+    CheckboxesModule,
+    RadiosModule
   ],
 })
 export class SharedModule {}
